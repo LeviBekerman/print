@@ -2,7 +2,7 @@ name: Playwright Tests
 on:
   push:
     branches: [ main, master ]
-  pull: 'https://github.com/LeviBekerman/PlaywrightGradle.git'
+  pull_request: 'https://github.com/LeviBekerman/PlaywrightGradle.git'
 
 jobs:
   test:
