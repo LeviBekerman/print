@@ -16,7 +16,4 @@ jobs:
       - name: Build
         run: gradle build -x test
       - name: Test
-        run: cd ./ && 
-            git clone https://github.com/LeviBekerman/PlaywrightGradle.git &&
-            cd PlaywrightGradle
-            gradle test
+        run: cd ./ && git clone https://github.com/LeviBekerman/PlaywrightGradle.git && cd PlaywrightGradle && gradle test
