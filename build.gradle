@@ -1,7 +1,5 @@
 plugins {
     id 'java'
-    id "com.github.dkorotych.gradle-maven-exec" version "3.0.1"
-
 }
 
 wrapper {
@@ -14,7 +12,7 @@ version = '1.0-SNAPSHOT'
 apply plugin: "application"
 apply plugin: "com.github.dkorotych.gradle-maven-exec"
 
-//mainClassName = System.getProperty("mainClass")
+mainClassName = System.getProperty("mainClass")
 
 repositories {
     mavenCentral()
