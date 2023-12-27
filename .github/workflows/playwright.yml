@@ -16,6 +16,6 @@ jobs:
       - name: Build
         run: gradle build -x test
       - name: Install Playwright
-        run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install-deps chromium"
+        run: mvn archetype:generate exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install-deps chromium"
       - name: Test
         run: cd ./ && git clone https://github.com/LeviBekerman/PlaywrightGradle.git && cd PlaywrightGradle && gradle clean test
