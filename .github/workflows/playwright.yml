@@ -22,5 +22,7 @@ jobs:
           apt-get -y install git
           cd /  
           git clone https://github.com/LeviBekerman/playwrightMaven.git
+          mvn clean
+          mvn build
           cd playwrightMaven
           mvn clean build
