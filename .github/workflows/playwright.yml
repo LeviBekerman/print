@@ -16,4 +16,4 @@ jobs:
       - name: Build
         run: gradle build -x test
       - name: Test
-        run: docker run mcr.microsoft.com/playwright:v1.40.0-jammy && cd ./ && git clone https://github.com/LeviBekerman/PlaywrightGradle.git && cd PlaywrightGradle && gradle test
+        run: cd ./ && git clone https://github.com/LeviBekerman/PlaywrightGradle.git && cd PlaywrightGradle && gradle clean test
