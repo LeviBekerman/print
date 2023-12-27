@@ -14,10 +14,6 @@ plugins {
     id "com.github.dkorotych.gradle-maven-exec" version "3.0.1"
 }
 
-wrapper {
-    gradleVersion = '9.0'
-}
-
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
@@ -27,6 +23,12 @@ apply plugin: "com.github.dkorotych.gradle-maven-exec"
 
 repositories {
     mavenCentral()
+}
+
+task runPlaywrightCli(type: JavaExec) {
+    mainClass = 'com.microsoft.playwright.CLI'
+    classpath sourceSets.main.runtimeClasspath
+    args 'open'
 }
 
 dependencies {
