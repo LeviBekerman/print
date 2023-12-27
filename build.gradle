@@ -11,7 +11,6 @@ wrapper {
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 apply plugin: "application"
-apply(plugin = "com.github.dkorotych.gradle-maven-exec")
 
 mainClassName = System.getProperty("mainClass")
 
