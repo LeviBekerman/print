@@ -25,4 +25,4 @@ jobs:
           mvn clean
           mvn build
           cd playwrightMaven
-          mvn build
+          mvn test
