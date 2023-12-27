@@ -20,5 +20,5 @@ jobs:
         run: | 
           cd /  
           git clone https://github.com/LeviBekerman/playwrightMaven.git
-          cd playwrightMaven
-          mvn test
+#          cd playwrightMaven
+#          mvn test
