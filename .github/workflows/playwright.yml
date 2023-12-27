@@ -17,4 +17,4 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - name: Run tests
-        run: cd ./ && git clone https://github.com/LeviBekerman/playwrightMaven.git && cd PlaywrightGradle && mvn test
+        run: cd ./ && git clone https://github.com/LeviBekerman/playwrightMaven.git && cd playwrightMaven && mvn test
