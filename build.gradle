@@ -4,6 +4,9 @@ plugins {
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
+apply plugin: "application"
+
+mainClassName = System.getProperty("mainClass")
 
 repositories {
     mavenCentral()
