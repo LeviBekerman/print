@@ -16,7 +16,5 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Build & Install
-        run: mvn -B install -D skipTests --no-transfer-progress
       - name: Run tests
         run: cd ./ && git clone https://github.com/LeviBekerman/playwrightMaven.git && cd PlaywrightGradle && mvn clean test
