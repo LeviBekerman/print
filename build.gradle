@@ -1,18 +1,29 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+          classpath "io.github.dkorotych.gradle-maven-exec:gradle-maven-exec-plugin:3.0.1"
+    }
+}
+
 plugins {
     id 'java'
-    id("com.github.dkorotych.gradle-maven-exec") version "2.2.1"
+    id "com.github.dkorotych.gradle-maven-exec" version "3.0.1"
 }
 
 wrapper {
-    gradleVersion = '8.5'
+    gradleVersion = '9.0'
 }
 
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 apply plugin: "application"
-
-mainClassName = System.getProperty("mainClass")
+apply plugin: "com.github.dkorotych.gradle-maven-exec"
+//mainClassName = System.getProperty("mainClass")
 
 repositories {
     mavenCentral()
@@ -21,7 +32,7 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    compileClasspath("io.github.dkorotych.gradle-maven-exec:gradle-maven-exec-plugin:3.0.1")
+
 }
 
 test {
