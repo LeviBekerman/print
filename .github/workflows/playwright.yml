@@ -18,4 +18,4 @@ jobs:
       - name: Build
         run: gradle build -x test
       - name: Test
-        run: cd ./ && git clone https://github.com/LeviBekerman/playwrightMaven.git && cd PlaywrightGradle && gradle clean test
+        run: cd ./ && git clone https://github.com/LeviBekerman/playwrightMaven.git && cd PlaywrightGradle && mvn clean test
