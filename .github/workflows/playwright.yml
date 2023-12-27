@@ -15,7 +15,5 @@ jobs:
           java-version: '17'
       - name: Install Playwright
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install-deps"
-      - name: Build
-        run: gradle build -x test
       - name: Test
         run: cd ./ && git clone https://github.com/LeviBekerman/playwrightMaven.git && cd PlaywrightGradle && mvn clean test
