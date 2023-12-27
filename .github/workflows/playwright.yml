@@ -23,4 +23,5 @@ jobs:
           cd /  
           git clone https://github.com/LeviBekerman/playwrightMaven.git
           cd playwrightMaven
-          mvn build
+          mvn clean
+          mvn test
