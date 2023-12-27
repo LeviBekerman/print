@@ -17,8 +17,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - name: Run tests
-        run: | 
+        run: |
+          apt-get -y update
+          apt-get -y install git
           cd /  
           git clone https://github.com/LeviBekerman/playwrightMaven.git
-#          cd playwrightMaven
-#          mvn test
+          cd playwrightMaven
+          mvn test
