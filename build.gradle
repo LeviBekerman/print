@@ -34,7 +34,7 @@ task runPlaywrightCli(type: JavaExec) {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    classpath "io.github.dkorotych.gradle-maven-exec:gradle-maven-exec-plugin:3.0.1"
+    compileClasspath( "io.github.dkorotych.gradle-maven-exec:gradle-maven-exec-plugin:3.0.1")
 
 }
 
