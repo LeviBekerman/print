@@ -14,12 +14,10 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Install Playwright
+      - name: Install Playwright and test
         run: |
           git clone https://github.com/LeviBekerman/playwrightMaven.git
           cd playwrightMaven
           mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
-      - name: Run tests
-        run: |
           cd playwrightMaven
           mvn test
